@@ -1,3 +1,12 @@
+import Link from "next/link";
+
 export default function Header() {
-	return <header>Footer</header>;
+	return (
+		<header>
+			<nav>
+				<Link href="/">Home</Link>
+				<Link href="/paddle">Paddle</Link>
+			</nav>
+		</header>
+	);
 }
