@@ -1,5 +1,9 @@
+import { kv } from "@vercel/kv";
+
 export async function GET() {
-	return new Response("This is a new route under /api/message");
+	// <string> between the method and the invocation tells the function what it will return
+	const message = await kv.get<string>("message");
+	return new Response(JSON.stringify(message));
 }
 
 export async function POST() {
