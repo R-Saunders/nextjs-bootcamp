@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default async function Home() {
 	const res = await fetch("http://localhost:3000/api/message", {
 		next: { revalidate: 2 },
